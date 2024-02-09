@@ -1,0 +1,68 @@
+for extradata = 3: output = 69 floats i guess
+byteformat: little endian
+
+    
+0	Time                   float32 `json:"time"`
+1	LapTime                float32 `json:"lapTime"`
+2	LapDistance            float32 `json:"lapDistance"`
+3	TotalDistance          float32 `json:"distance"`
+4	X                      float32 `json:"-"` // World space position
+5	Y                      float32 `json:"-"` // World space position
+6	Z                      float32 `json:"-"` // World space position
+7	Speed                  float32 `json:"speed"` in [m/s]
+8	Xv                     float32 `json:"-"` // Velocity in world space
+9	Yv                     float32 `json:"-"` // Velocity in world space
+10	Zv                     float32 `json:"-"` // Velocity in world space
+11	Xr                     float32 `json:"-"` // World space right direction
+12	Yr                     float32 `json:"-"` // World space right direction
+13	Zr                     float32 `json:"-"` // World space right direction
+14	Xd                     float32 `json:"-"` // World space forward direction
+15	Yd                     float32 `json:"-"` // World space forward direction
+16	Zd                     float32 `json:"-"` // World space forward direction
+17	Susp_pos_bl            float32 `json:"-"` Position of Suspension Rear Left
+18	Susp_pos_br            float32 `json:"-"` Position of Suspension Rear Right
+19	Susp_pos_fl            float32 `json:"-"` Position of Suspension Front Left
+20	Susp_pos_fr            float32 `json:"-"` Position of Suspension Front Right
+21	Susp_vel_bl            float32 `json:"-"` Velocity of Suspension Rear Left
+22	Susp_vel_br            float32 `json:"-"` Velocity of Suspension Rear Right
+23	Susp_vel_fl            float32 `json:"-"` Velocity of Suspension Front Left
+24	Susp_vel_fr            float32 `json:"-"` Velocity of Suspension Front Right
+25	Wheel_speed_bl         float32 `json:"-"` Velocity of Wheel Rear Left
+26	Wheel_speed_br         float32 `json:"-"` Velocity of Wheel Rear Right
+27	Wheel_speed_fl         float32 `json:"-"` Velocity of Wheel Front Left
+28	Wheel_speed_fr         float32 `json:"-"` Velocity of Wheel Front Right
+29	Throttle               float32 `json:"throttlePosition"`
+30	Steer                  float32 `json:"steerPosition"`
+31	Brake                  float32 `json:"brakePosition"`
+32	Clutch                 float32 `json:"clutchPosition"`
+33	Gear                   float32 `json:"gear"` [0 = Neutral, 1 = 1, 2 = 2, ..., 10 = Reverse]
+34	Gforce_lat             float32 `json:"-"`
+35	Gforce_lon             float32 `json:"-"`
+36	Lap                    float32 `json:"-"` Current Lap
+37	EngineRate             float32 `json:"rpm"` [rpm / 10]
+38	Sli_pro_native_support float32 `json:"-"` // SLI Pro support
+39	Car_position           float32 `json:"-"` // car race position
+40	Kers_level             float32 `json:"-"` // kers energy left
+41	Kers_max_level         float32 `json:"-"` // kers maximum energy
+42	Drs                    float32 `json:"-"` // 0 = off, 1 = on
+43	Traction_control       float32 `json:"-"` // 0 (off) - 2 (high)
+44	Anti_lock_brakes       float32 `json:"-"` // 0 (off) - 1 (on)
+45	Fuel_in_tank           float32 `json:"-"` // current fuel mass
+46	Fuel_capacity          float32 `json:"-"` // fuel capacity
+47	In_pits                float32 `json:"-"` // 0 = none, 1 = pitting, 2 = in pit area
+48	Sector                 float32 `json:"-"` // 0 = sector1, 1 = sector2 float32 `json:"-"` 2 = sector3
+49	Sector1_time           float32 `json:"-"` // time of sector1 (or 0)
+50	Sector2_time           float32 `json:"-"` // time of sector2 (or 0)
+51-54	Brakes_temp            float32 `json:"-"` // brakes temperature (centigrade) 51 : Rear Left, 52 : Rear Right, 53 : Front Left, 54 : Front Right
+55-58	Wheels_pressure        float32 `json:"-"` // wheels pressure PSI 55 : Rear Left, 56 : Rear Right, 57 : Front Left, 58 : Front Right
+59	Teainfo                float32 `json:"-"` // team ID
+60	Total_laps             float32 `json:"-"` // total number of laps in this race
+61	Track_size             float32 `json:"-"` // track size meters
+62	Last_lap_time          float32 `json:"-"` // last lap time
+63	Max_rpm                float32 `json:"-"` // cars max RPM, at which point the rev limiter will kick in \ Maximum rpm / 10
+64	Idle_rpm               float32 `json:"-"` // cars idle RPM
+65	Max_gears              float32 `json:"-"` // maximum number of gears
+66	SessionType            float32 `json:"-"` // 0 = unknown, 1 = practice, 2 = qualifying, 3 = race
+67	DrsAllowed             float32 `json:"trackLength"` // 0 = not allowed, 1 = allowed, -1 = invalid / unknown
+68	Track_number           float32 `json:"-"` // -1 for unknown, 0-21 for tracks
+69	VehicleFIAFlags        float32 `json:"maxRpm"` // -1 = invalid/unknown, 0 = none, 1 = green, 2 = blue, 3 = yellow, 4 = red
