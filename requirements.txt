@@ -1,0 +1,2 @@
+python 3.11 (i run it on this version so you better do the same)
+pip install openrgb-python
