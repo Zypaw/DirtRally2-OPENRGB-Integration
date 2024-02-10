@@ -60,9 +60,9 @@ byteformat: little endian
 61	Track_size             float32 `json:"-"` // track size meters
 62	Last_lap_time          float32 `json:"-"` // last lap time
 63	Max_rpm                float32 `json:"-"` // cars max RPM, at which point the rev limiter will kick in \ Maximum rpm / 10
-64	Idle_rpm               float32 `json:"-"` // cars idle RPM
-65	Max_gears              float32 `json:"-"` // maximum number of gears
-66	SessionType            float32 `json:"-"` // 0 = unknown, 1 = practice, 2 = qualifying, 3 = race
-67	DrsAllowed             float32 `json:"trackLength"` // 0 = not allowed, 1 = allowed, -1 = invalid / unknown
-68	Track_number           float32 `json:"-"` // -1 for unknown, 0-21 for tracks
-69	VehicleFIAFlags        float32 `json:"maxRpm"` // -1 = invalid/unknown, 0 = none, 1 = green, 2 = blue, 3 = yellow, 4 = red
+	Idle_rpm               float32 `json:"-"` // cars idle RPM
+	Max_gears              float32 `json:"-"` // maximum number of gears
+	SessionType            float32 `json:"-"` // 0 = unknown, 1 = practice, 2 = qualifying, 3 = race
+	DrsAllowed             float32 `json:"trackLength"` // 0 = not allowed, 1 = allowed, -1 = invalid / unknown
+	Track_number           float32 `json:"-"` // -1 for unknown, 0-21 for tracks
+	VehicleFIAFlags        float32 `json:"maxRpm"` // -1 = invalid/unknown, 0 = none, 1 = green, 2 = blue, 3 = yellow, 4 = red
