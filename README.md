@@ -1,4 +1,4 @@
-# DR2 Integratiob
+# DR2 Integration
 
 Show rpms counter of dirt rally wirelessly to a wled controler that is attached to a led strip to show RPMS
 
