@@ -24,7 +24,7 @@ led = cli.get_devices_by_name("WLED")[0]
 
 
 for i in range(RETRY_MAX):
-    # the fallback loop
+    # the fallback loop 
     try:
         # start to subscribe telemetry
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
